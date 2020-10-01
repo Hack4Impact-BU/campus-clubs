@@ -18,12 +18,12 @@ export default function Navigation() {
                     <div className="navbar-item">
                         <div className="buttons">
                             <Link href="/auth/signup">
-                                <a class="button is-primary">
+                                <a className="button is-primary">
                                     <strong> Sign Up </strong>
                                 </a>
                             </Link>
                             <Link href="/auth/login">
-                                <a class="button is-light">
+                                <a className="button is-light">
                                     Log In
                                 </a>
                             </Link>

@@ -1,10 +1,11 @@
 import '../styles/globals.css';
 import "bulma/css/bulma.min.css";
 import "../styles/navigation.scss";
+import "@fortawesome/fontawesome-free/css/all.css";
 
-import Navigation from '../components/Navigation';
-import App from "next/app";
 import React from 'react';
+import App from "next/app";
+import Navigation from '../components/Navigation';
 
 class MyApp extends App {
 
