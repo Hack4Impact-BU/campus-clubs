@@ -1,3 +1,4 @@
+import { signIn } from "next-auth/client"
 import Head from "next/head"
 import Logo from "../../../components/Logo"
 import styles from "./login.module.scss"
@@ -29,7 +30,7 @@ export default function LoginView() {
                         </span>
                     </p>
                 </div>
-                <button className="button is-success is-fullwidth"> Sign In </button>
+                <button onClick={() => signIn('credentials', {username: "md", password: "password"})} className="button is-success is-fullwidth"> Sign In </button>
             </div>
         </div>
         </div>
