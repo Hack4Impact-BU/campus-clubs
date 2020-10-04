@@ -1,28 +1,16 @@
-import {useSession } from 'next-auth/client'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useSession } from 'next-auth/client'
+import Dashboard from '../components/home/dashboard';
+import Landing from '../components/home/landing';
+import Layout from '../components/layout/Layout'
 
-export default function Home() {
-  const [ session, loading ] = useSession()
-  return (
-    <div>
-      <Head>
-        <title>CampusClubs</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {
-        session ? <p> You are signed in </p> : <p> Please sign in </p>
-      }
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+export default function Home(props) {
+  const [session, isLoading] = useSession();
+
+    return (
+      <Layout>
+        {
+          !session ? <Landing/> : <Dashboard/>
+        }
+      </Layout>
+    )
 }

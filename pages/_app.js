@@ -4,38 +4,13 @@ import "../styles/navigation.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import React from 'react';
-import App from "next/app";
-import Navigation from '../components/Navigation';
+import { Provider } from "next-auth/client"
 
-class MyApp extends App {
-
-  static async getInitialProps(props) {
-    const {Component, ctx} = props;
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return {pageProps}
-  }
-
-  render() {
-    const {Component, pageProps} = this.props;
-    return (
-      <>
-      {
-       (Component.name == "LoginView") ? <Component {...pageProps} /> : 
-       <>
-         <Navigation/>
-         <div className="container">
-           <Component {...pageProps} />
-          </div>
-        </>
-      }
-      </>
-      )
-  }
+export default function App({Component, pageProps}) {
+  return (
+    <Provider 
+    session={pageProps.session}>
+      <Component {...pageProps}/>
+    </Provider>
+  )
 }
-
-export default MyApp

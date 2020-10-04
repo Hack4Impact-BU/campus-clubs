@@ -16,12 +16,12 @@ a {
   box-sizing: border-box;
 }
 
-.container {
-  margin-top: 1rem;
-}
-
 p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 12px;
+}
+
+.main-container {
+  padding-top: 1rem;
 }
