@@ -13,6 +13,7 @@ export default class LoggedInUserMenu extends React.Component {
     handleMenuClick = () => {
         this.setState(state => ({dropdownActive: !state.dropdownActive}))
     }
+    
     render() {
         return (
             <div className={`navbar-item has-dropdown ${this.state.dropdownActive ? "is-active" : null}`}  onClick={this.handleMenuClick}>

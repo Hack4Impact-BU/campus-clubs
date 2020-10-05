@@ -1,16 +1,22 @@
-import { useSession } from 'next-auth/client'
-import Dashboard from '../components/home/dashboard';
-import Landing from '../components/home/landing';
-import Layout from '../components/layout/Layout'
+import { getSession } from 'next-auth/client';
+import { withRouter } from 'next/router';
+import React from "react";
 
-export default function Home(props) {
-  const [session, isLoading] = useSession();
+class Home extends React.Component{
 
-    return (
-      <Layout>
-        {
-          !session ? <Landing/> : <Dashboard/>
-        }
-      </Layout>
-    )
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount = async () => {
+    const session = await getSession();
+    session ? this.props.router.push("/dashboard") : this.props.router.push("/landing")
+  }
+
+  render() {
+    return (null)
+  }
+
 }
+
+export default withRouter(Home)
