@@ -10,13 +10,7 @@ export default function App({Component, pageProps}) {
   return (
     <Provider 
     session={pageProps.session}>
-      {
-        Component.name == "LoginView" ? <Component {...pageProps}/> :
-        <>
-        <Header/>
-        <Component {...pageProps}/>
-        </>
-      }
+      <Component {...pageProps}/>
     </Provider>
   )
 }
