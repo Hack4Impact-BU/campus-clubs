@@ -24,7 +24,7 @@ const options = {
     },
     callbacks: {
         redirect: async (url, baseUrl) => {
-            return Promise.resolve(baseUrl);
+            return Promise.resolve("/");
         }
     }
 }
