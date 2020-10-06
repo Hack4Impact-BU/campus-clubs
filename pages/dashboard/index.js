@@ -1,9 +1,11 @@
 import Wrapper from "../../components/layout/Wrapper";
+import styles from "./dashboard.module.scss"
 
 export default function Dashboard() {
     return (
-        <Wrapper>
-            <h2> Dashboard </h2>
+        <Wrapper component={undefined}>
+            <h1> Dashboard </h1>
+            <p> Nothing here yet</p>
         </Wrapper>
     )
 }

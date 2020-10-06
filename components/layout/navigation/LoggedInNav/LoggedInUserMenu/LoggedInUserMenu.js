@@ -17,7 +17,7 @@ export default class LoggedInUserMenu extends React.Component {
     render() {
         return (
             <div className={`navbar-item has-dropdown ${this.state.dropdownActive ? "is-active" : null}`}  onClick={this.handleMenuClick}>
-                <div className={styles.userMenu}>
+                <div className={styles.menu}>
                     <img src="avatar.png"/>
                     <i className="fas fa-bars"></i>
                 </div>

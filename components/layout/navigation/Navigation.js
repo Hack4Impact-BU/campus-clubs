@@ -1,12 +1,12 @@
 import { useSession } from "next-auth/client";
 import LoggedInNav from "./LoggedInNav/LoggedInNav";
 import LoggedOutNav from "./LoggedOutNav/LoggedOutNav";
+import styles from "./navigation.module.scss";
 
 export default function Navigation() {
     const [session, useLoading] = useSession();
     return(
-        <nav className="navbar navigation" role="navigation" aria-label="main navigation">
-            <div className="container">
+        <nav className={`navbar ${styles.navigation}`} role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="#">
                         <img src="logo.png" width="112" height="28"></img>
@@ -20,7 +20,6 @@ export default function Navigation() {
                 {
                     session ? LoggedInNav() : LoggedOutNav()
                 }
-            </div>
         </nav>
     )
 }

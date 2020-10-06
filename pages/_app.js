@@ -1,6 +1,5 @@
-import '../styles/globals.css';
-import "bulma/css/bulma.min.css";
-import "../styles/navigation.scss";
+import '../styles/globals.scss';
+import "bulma/bulma.sass";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import React from 'react';
@@ -15,9 +14,7 @@ export default function App({Component, pageProps}) {
         Component.name == "LoginView" ? <Component {...pageProps}/> :
         <>
         <Header/>
-        <main className="container main-container">
-            <Component {...pageProps}/>
-        </main>
+        <Component {...pageProps}/>
         </>
       }
     </Provider>
