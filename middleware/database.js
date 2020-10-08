@@ -7,7 +7,6 @@ const dbClient = new MongoClient(process.env.DB_URI, {
 
 async function databaseMiddleware(req, res, next) {
     if (!dbClient.isConnected()) await dbClient.connect();
-    req.dbClient = dbClient;
     req.db = dbClient.db('campusclubs');
     return next()
 }
