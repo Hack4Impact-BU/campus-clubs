@@ -14,11 +14,10 @@ export default class UserController extends Controller {
         }
 
         bcrypt.hash(password, saltRounds, async (err, hash) => {
-            let user = await this.db.collection("users").insertOne({
+            await this.db.collection("users").insertOne({
                 "username": username,
                 "password": hash
             })
-            console.log(user)
             return this.sendMessage("User successfully registered.")
         })
 

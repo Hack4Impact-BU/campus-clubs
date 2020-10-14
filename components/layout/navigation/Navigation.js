@@ -1,4 +1,5 @@
 import { useSession } from "next-auth/client";
+import Logo from "../../logo/Logo";
 import LoggedInNav from "./LoggedInNav/LoggedInNav";
 import LoggedOutNav from "./LoggedOutNav/LoggedOutNav";
 import styles from "./navigation.module.scss";
@@ -9,7 +10,7 @@ export default function Navigation() {
         <nav className={`navbar ${styles.navigation}`} role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="#">
-                        <img src="logo.png" width="112" height="28"></img>
+                        <Logo/>
                     </a>
                     <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="MainNavbar">
                         <span aria-hidden="true"></span>

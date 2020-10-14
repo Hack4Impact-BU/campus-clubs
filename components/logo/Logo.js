@@ -1,5 +1,5 @@
 export default function Logo() {
     return(
-        <img src={"../logo.png"}/>
+         <img src={"/logo.png"}/>
     )
 }

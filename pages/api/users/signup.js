@@ -1,6 +1,6 @@
 
-import UserController from '../../../controllers/UserController';
-import route from '../../../middleware';
+import UserController from '../../../server/controllers/UserController';
+import route from '../../../server/middleware';
 
 
 route.post(async (req, res) => { new UserController(req, res).signup()})

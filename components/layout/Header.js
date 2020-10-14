@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navigation from "./navigation/Navigation";
+import Navigation from "./Navigation/Navigation";
 
 export default function Header() {
     return (

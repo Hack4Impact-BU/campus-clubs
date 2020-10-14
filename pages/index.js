@@ -1,22 +1,17 @@
-import { getSession } from 'next-auth/client';
-import { withRouter } from 'next/router';
 import React from "react";
+import Header from '../components/layout/Header';
+import styles from "./index.module.scss";
 
-class Home extends React.Component{
-
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount = async () => {
-    const session = await getSession();
-    session ? this.props.router.push("/dashboard") : this.props.router.push("/landing")
-  }
-
-  render() {
-    return (null)
-  }
-
+export default function index(){
+  return (
+      <>
+      <Header/>
+      <main className="container main-container">
+          <div className={styles.container}>
+              <h1> All-in-One Community Engagement Platform</h1>
+              <p> CampusClubs gives you what CampusGroups never could </p>
+          </div>
+      </main>
+      </>
+  )
 }
-
-export default withRouter(Home)

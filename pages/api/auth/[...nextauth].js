@@ -1,5 +1,8 @@
+import Axios from 'axios';
+import { modelNames } from 'mongoose';
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
+import authenticate from '../users/login';
 
 const options = {
     providers: [
@@ -10,21 +13,23 @@ const options = {
                 password: { label: "Password", type: "password"}
             },
             authorize: async (credentials) => {
-                const user = { id: 0, name: "Manuja DeSilva", email: "mdesilva@bu.edu"}
-                if (user) {
-                    return Promise.resolve(user)
-                } else {
-                    return Promise.reject()
+                const { username, password } = credentials;
+                try {
+                    const user = await authenticate(username, password);
+                    return Promise.resolve({});
+                }
+                catch(error) {
+                    return Promise.reject(`/auth/login?error=${error}`);
                 }
             }
         })
-    ], 
+    ],
     pages: {
-        signIn: "/auth/login"
+        signIn: '/auth/login'
     },
     callbacks: {
-        redirect: async (url, baseUrl) => {
-            return Promise.resolve("/");
+        redirect: async(url, baseUrl) => {
+            return Promise.resolve("/dashboard");
         }
     }
 }
