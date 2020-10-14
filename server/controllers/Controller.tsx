@@ -17,7 +17,7 @@ export default class Controller {
         this.db = req.db;
     }
 
-    protected sendStatus(status: Number) {
+    protected sendStatus(status: number) {
         return this.res.status(status).json({});
     }
     

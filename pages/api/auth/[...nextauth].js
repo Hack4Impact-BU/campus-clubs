@@ -1,5 +1,3 @@
-import Axios from 'axios';
-import { modelNames } from 'mongoose';
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 import authenticate from '../users/login';
