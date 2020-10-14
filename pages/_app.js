@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 
 import React from 'react';
 import { Provider, useSession } from "next-auth/client"
-import Wrapper from '../components/layout/Wrapper';
+import Wrapper from '../components/Layout/Wrapper';
 
 //TODO: Validate these routes
 //These routes don't have the Wrapper that protected routes have; so each page currently has a custom header.

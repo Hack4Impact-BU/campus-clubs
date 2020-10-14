@@ -1,5 +1,5 @@
 import React from "react";
-import Header from '../components/layout/Header';
+import Header from '../components/Layout/Header';
 import styles from "./index.module.scss";
 
 export default function index(){

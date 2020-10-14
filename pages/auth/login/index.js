@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Logo from "../../../components/logo/Logo"
+import Logo from "../../../components/Logo/Logo"
 import { useRouter } from "next/router";
 import { csrfToken } from "next-auth/client"
 import styles from "./login.module.scss"
