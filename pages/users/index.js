@@ -1,6 +1,4 @@
-import Wrapper from "../../components/layout/Wrapper";
-
-export default function UsersView() {
+export default function Users() {
     return (
         <>
         <h1> User Management</h1>

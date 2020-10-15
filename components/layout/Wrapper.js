@@ -1,4 +1,4 @@
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "./Sidebar";
 import PropTypes from 'prop-types';
 import Header from "./Header";
 

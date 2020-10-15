@@ -1,4 +1,4 @@
-import LoggedInUserMenu from "./LoggedInUserMenu/LoggedInUserMenu";
+import LoggedInUserMenu from "./LoggedInUserMenu";
 
 export default function LoggedInNav() {
     return (

@@ -1,5 +1,5 @@
 import { useSession } from "next-auth/client";
-import Logo from "../../Logo/Logo";
+import Logo from "../../Logo";
 import LoggedInNav from "./LoggedInNav";
 import LoggedOutNav from "./LoggedOutNav";
 import styles from "./navigation.module.scss";
