@@ -8,7 +8,7 @@ import Wrapper from "../components/Layout/Wrapper";
 
 //TODO: Validate these routes
 //These routes don't have the Wrapper that protected routes have; so each page currently has a custom header.
-const ROUTES_ACCESSIBLE_BY_PUBLIC_ONLY = ["/", "/auth/login"]
+const ROUTES_ACCESSIBLE_BY_PUBLIC_ONLY = ["/", "/auth/login", "/auth/signup"]
 
 const getProtectedRouteSidebarName = (path) => {
   return path.charAt(1).toUpperCase() + path.slice(2)
